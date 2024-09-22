@@ -20,6 +20,7 @@ android {
     compileSdkVersion 27 // Compile against Android 8.1 (API level 27)
 
     defaultConfig {
+
         minSdkVersion 27  // Minimum SDK level for Android 8.1
         targetSdkVersion 27  // Targeting Android 8.1
     }
