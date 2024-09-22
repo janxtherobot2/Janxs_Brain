@@ -34,6 +34,23 @@ android {
         targetSdkVersion 26  // Targeting Android 8.1
     }
 
+    // Automatically extract versionCode and versionName from the AndroidManifest.xml file
+    def manifestFile = project(':FtcRobotController').file('src/main/AndroidManifest.xml')
+    def manifestText = manifestFile.getText()
+    //
+    def vCodePattern = Pattern.compile("versionCode=\"(\\d+(\\.\\d+)*)\"")
+    def matcher = vCodePattern.matcher(manifestText)
+    matcher.find()
+    def vCode = Integer.parseInt(matcher.group(1))
+    //
+    def vNamePattern = Pattern.compile("versionName=\"(.*)\"")
+    matcher = vNamePattern.matcher(manifestText)
+    matcher.find()
+    def vName = matcher.group(1)
+    //
+    versionCode vCode
+    versionName vName
+
     buildTypes {
         release {
             signingConfig signingConfigs.release
