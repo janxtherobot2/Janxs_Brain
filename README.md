@@ -15,6 +15,10 @@ Welcome to our FTC (First Tech Challenge) Team's Code Master Repository! This re
 ## About the Project
 This repository contains all the code we are using to control our robot for the current FTC season. Our code is written in Java and organized into different modules for autonomous mode, teleop control, and hardware configuration.
 
+### Feature Branches
+- `Updtae-AddedOldFiles` is a branch for migrating last season's code into this repository
+- `gradel_build_fix_contoll_hub_downgrade` is a branch with working downgraded production code working with Android 8.1.0
+
 ### Key Features
 - **Autonomous Mode**: Pre-programmed movements for various challenges.
 - **TeleOp Mode**: Manual control for driving and manipulating the robot during the competition.
